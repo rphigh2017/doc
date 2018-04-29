@@ -182,4 +182,10 @@ cat ~/.ssh/id_rsa.pub
 
 git remote add origin https://github.com/$user/doc.git
 git push -u origin master
+
+#############
+git status
+git add
+git commit
+git push
 ```
