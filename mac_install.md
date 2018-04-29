@@ -167,3 +167,19 @@ cabextract PowerPointViewer.exe
 cabextract ppviewer.cab
 open CONSOLA*.TTF
 ```
+
+## git
+
+```bash
+git init
+git add wiki.md
+git commit -m "comment"
+git config --global --edit
+git status
+
+ssh-keygen -t rsa -C "youremail@qq.com"
+cat ~/.ssh/id_rsa.pub
+
+git remote add origin https://github.com/$user/doc.git
+git push -u origin master
+```
