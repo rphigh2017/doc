@@ -2,14 +2,35 @@
 
 [TOC]
 
+#### ab
+```bash
+ab -c $threadnum -n $totalreq $http_url
+```
+
 #### awk
 ```bash
 cat d1 | awk '{print "del "$1}' | redis-cli -h $host -p $port
 ```
 
+#### crontab
+```bash
+*/5 * * * * $bin 2>&1 > /dev/null & 
+```
+
 #### curl
 ```bash
-curl -H "Host:$host" $url
+# GET
+curl -H "Host:$host" --referer "ptag=baidu" $url
+# POST
+curl -v -d "k1=v1&k2=v2&..." -H "Accept-Encoding: gzip, deflate" --compressed "http://$host/$cginame"
+```
+
+#### go
+```bash
+go test -bench=. closure_test.go
+go test -bench=. -cpuprofile cpu.prof
+go tool pprof unitest.test cpu.prof
+GODEBUG=gctrace=1 ./testgo
 ```
 
 #### gor
