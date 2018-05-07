@@ -1,0 +1,7 @@
+*scheme.txt*
+
+*@scheme*
+>
+    export SCHEMEHEAPDIRS=
+    ./configure --machine=ta6le
+

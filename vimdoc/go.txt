@@ -1,0 +1,14 @@
+*go.txt*
+
+*@go:tool*
+>
+    go tool objdump $exe -s $func_name_you_care
+    go test -bench=. closure_test.go
+    go test -bench=. -cpuprofile cpu.prof
+    go tool pprof unitest.test cpu.prof
+    GODEBUG=gctrace=1 ./testgo
+    go test -bench LRUCache
+    go test -run LRUCache
+
+
+vim:ft=help

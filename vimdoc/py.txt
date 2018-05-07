@@ -1,0 +1,14 @@
+*py.txt*
+
+*@py:set*
+>
+    list(set(alist)^set(blist)  [item for item in alist for item not in blist]
+    list(set(a).union(set(b)))
+    list((set(a).union(set(b))^(set(a)^set(b)))
+
+*@py:PATH*
+>
+    sys.path.append()
+
+
+vim:ft=help

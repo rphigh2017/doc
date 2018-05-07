@@ -1,0 +1,19 @@
+*c.txt*
+
+*@c*
+
+*@c:gcc*
+>
+    # 连接外部库时，linux默认使用动态库，其次静态库
+    gcc test.cpp -L. -ltestlib
+    # 使用静态库
+    gcc test.cpp -L. -static -ltestlib
+    # 当动态库与静态库混合使用时，使用-static会导致所有库以静态方式链接，需要用-Wl的方式指定
+    gcc test.cpp -L. -Wl,Bdynamic -ltestdll -Wl,-Bstatic -ltestlib -Wl,-Bdynamic
+    # 最后的-Wl,-Bdynamic会将缺省链接模式恢复成动态链接
+    # -Bstatic还有三种写法: -dn和-non_shared和-static
+    # -Bdynamic还有二种写法: -dy和-call_shared
+    gcc -Wl,-dn -lsqlite -Wl,-dy
+
+
+vim:ft=help

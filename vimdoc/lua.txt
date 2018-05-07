@@ -1,0 +1,7 @@
+*lua.txt*
+
+*@lua*
+>
+    https://www.lua.org/pil/contents.html
+
+vim:ft=help

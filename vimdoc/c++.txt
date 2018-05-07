@@ -1,0 +1,11 @@
+*c++.txt*
+
+*c++*
+
+>
+    boost::lockfree::queue
+    boost::interprocess::message_queue
+    boost::split(sv,s,boost::is_any_of("-"),boost::token_compress_on);
+    boost::algorithm::join(list,s);
+
+vim:ft=help

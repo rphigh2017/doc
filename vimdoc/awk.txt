@@ -1,0 +1,10 @@
+*awk.txt*
+
+*@awk*
+>
+    echo "select * from $table;" |\
+    mysql -h$host -P$port -u$user -p$pswd |\
+    awk '{print "'"insert ignore into $table ($str,$int) values(\'"'"$1"'"\',"'"$2"'");\n"'"}'
+>
+
+vim:ft=help

@@ -1,0 +1,43 @@
+*sql.txt*
+
+================================================================================
+*@sql*
+================================================================================
+
+*@sql:mysql*
+>
+    mysql --default-character-set=utf8 -h$host -P$port -u$user -p$pswd $db_name
+>
+*@sql:select*
+>
+    select * from $table where ascii(left(guid,1))%2=0 order by id limit 5,10;
+    SELECT *,A.rate-B.rate
+        FROM (SELECT req,SUM(cut) AS sum,SUM(cnt)/(SELECT SUM(cnt)*1.0 FROM T1 GROUP BY req) AS A
+        JOIN (SELCT req,SUM(cnt) AS sum,SUM(cnt)/(SELECT SUM(cnt)*1.0 FROM t2)*100 AS rate FROM t2 GROUP BY req) AS B
+        ON A.req=B.req;
+
+*@sql:alter*
+>
+    alter table $table_name add column $column not null default 'all' after $column2;
+    alter table $table_name add index $index_name ($column_list);
+    alter table $table_name add unique ($column_list);
+    alter table $table_name add primary key ($column_list);
+>
+*@sql:delete*
+>
+    delete from $table
+        where id<(case when (select count(N.id) from $table as N)>3000
+                       then (select max(N.id)-1000 from $table as N)
+                       else (select min(N.id) from $table as N) end);
+>
+*@sql:create*
+>
+    create table if not exists t_queue (
+        id      integer primary key autoincreament,
+        item    blob,
+        type    integer,
+        optime  datetime default (datetime('now','localtime')));
+
+
+
+vim:ft=help
