@@ -1,6 +1,6 @@
 *awk.txt*
 
-*@awk*
+*@awk.txt*
 >
     echo "select * from $table;" |\
     mysql -h$host -P$port -u$user -p$pswd |\

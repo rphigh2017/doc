@@ -10,5 +10,21 @@
     go test -bench LRUCache
     go test -run LRUCache
 
+*@go:keywords*
+>
+    break       default     func        interface       select
+    case        defer       go          map             struct
+    chan        else        goto        package         switch
+    const       fallthrough if          range           type
+    continue    for         import      return          var
+
+*@go:time*
+*@go:gettimeofday*
+>
+    import "time"
+    s   := time.Now().Unix()
+    ns  := time.Now().UnixNano()
+    us  := ns / 1000
+    ms  := us / 1000
 
 vim:ft=help

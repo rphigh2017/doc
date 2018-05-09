@@ -1,8 +1,48 @@
 *py.txt*
 
+*@py:keywords*
+>
+    and         del     from    not     while
+    as          elif    global  or      with
+    assert      else    if      pass    yield
+    break       except  import  print
+    class       exec    in      raise
+    continue    finally is      return
+    def         for     lambda  try
+
+*@py:builtin*
+>
+    abs         divmod      input       open        staticmethod
+    all         enumerate   int         ord         str
+    any         eval        isinstance  pow         sum
+    basestring  execfile    issubclass  print       super
+    bin         file        iter        property    tuple
+    bool        filter      len         range       type
+    bytearray   float       list        raw_input   unichr
+    callable    format      locals      reduce      unicode
+    chr         frozenset   long        reload      vars
+    classmethod getattr     map         repr        xrange
+    cmp         globals     max         reversed    zip
+    compile     hasattr     memoryview  round       __import__
+    complex     hash        min         set
+    delattr     help        next        setattr
+    dict        hex         object      slice
+    dir         id          oct         sorted
+
 *@py:PATH*
 >
     sys.path.append()
+
+*@py:flock*
+>
+    if not os.path.exists(filename):
+        with open(filename, "w") as fd:
+            fd.write("%s-flock" % fimename)
+    fd = open(filename, "r+")
+    try:
+        fcntl.flock(fd.fileno(), fcntl.LOCK_EX|fcntl.LOCK_NB)
+    except IOError:
+        exit()
 
 *@py:hashlib*
 >
@@ -13,11 +53,28 @@
     h.update(req)
     rsp = h.hexdigest()
 
+*@py:localip*
+>
+    import fcntl
+    import socket
+    import struct
+
+    ifname = "eth1"
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    localip = socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915, struct.pack('256s', ifname[:15]))[20:24])
+
 *@py:set*
 >
     list(set(alist)^set(blist)  [item for item in alist for item not in blist]
     list(set(a).union(set(b)))
     list((set(a).union(set(b))^(set(a)^set(b)))
+
+*@py:time*
+*@py:gettimeofday*
+>
+    import time
+    s   = int(time.time())
+    ms  = int(time.time() * 1000)
 
 *@py:urlparse*
 >
