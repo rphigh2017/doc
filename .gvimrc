@@ -63,4 +63,10 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType java set omnifunc=javacomplete#Complete
 set rtp+=~/go/src/github.com/golang/lint/misc/vim
 
-nnoremap <silent> <F12> :A<cr>
+au BufNewFile * silent! 0r ~/.vim/template/tpl.%:e:e
+au BufNewFile,BufRead * silent! source ~/.vim/template/%:e.vim
+au FileType * execute 'set dictionary+=~/.vim/dictionary/'.&filetype
+
+nnoremap <c-j> /<+.\{-1,}+><cr>c/+>/e<cr>
+inoremap <c-j> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
+nnoremap <F10> :!python %
