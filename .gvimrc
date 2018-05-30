@@ -9,7 +9,8 @@ set noundofile
 set nobackup
 set noswapfile
 
-colorscheme morning
+" colorscheme morning
+colorscheme macvim
 
 set nocompatible
 set langmenu=en_US

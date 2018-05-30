@@ -33,6 +33,7 @@ pip install numpy
 pip install matplotlib
 pip install --user nose tornado sympy
 brew install octave
+charles
 ```
 
 ### by chrome
@@ -55,7 +56,7 @@ brew install octave
 * c/c++/gdb/cpplinq/boost/cpplint/astyle
 * golang/gofmt
 * lua
-* python/pylint/pep8
+* python/pylint/pep8/pycodestyle
 * perl
 * php
 * ruby
