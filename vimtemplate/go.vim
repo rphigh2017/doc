@@ -15,7 +15,7 @@ iabbrev type type !cursor! struct {<cr><+++><cr>}<Esc>:call search('!cursor!','b
 iabbrev type2 type !cursor! interface {<cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!
 iabbrev enum const {<cr><+++> = iota<cr><+++><cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!
 iabbrev func func !cursor!(<+++>) <+++> {<cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!
-iabbrev func2 func (this !cursor!) <+++>(<+++>) <+++> {<cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!
+iabbrev func2 func (p !cursor!) <+++>(<+++>) <+++> {<cr><+++><cr>}<Esc>:call search('!cursor!','b')<cr>cf!
 
 " -----------------------------------------------------------------------------
 iabbrev import import (<cr>"!cursor!"<cr>"<+++>"<cr>"<+++>"<cr>)<Esc>:call search('!cursor!','b')<cr>cf!

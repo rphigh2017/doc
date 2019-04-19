@@ -55,7 +55,7 @@ syntax on
 set completeopt=longest,menu
 set wildmenu
 
-autocmd FileType ruby, eruby set omnifunc=rubycomplete#Complete
+" autocmd FileType ruby, eruby set omnifunc=rubycomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags

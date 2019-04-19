@@ -14,6 +14,7 @@
 @flock	tools.txt	/*@flock*
 @go:gettimeofday	go.txt	/*@go:gettimeofday*
 @go:keywords	go.txt	/*@go:keywords*
+@go:regexp	go.txt	/*@go:regexp*
 @go:time	go.txt	/*@go:time*
 @go:tool	go.txt	/*@go:tool*
 @gor	tools.txt	/*@gor*
@@ -35,8 +36,14 @@
 @proc	tools.txt	/*@proc*
 @ps	tools.txt	/*@ps*
 @py:PATH	py.txt	/*@py:PATH*
+@py:builtin	py.txt	/*@py:builtin*
+@py:flock	py.txt	/*@py:flock*
+@py:gettimeofday	py.txt	/*@py:gettimeofday*
 @py:hashlib	py.txt	/*@py:hashlib*
+@py:keywords	py.txt	/*@py:keywords*
+@py:localip	py.txt	/*@py:localip*
 @py:set	py.txt	/*@py:set*
+@py:time	py.txt	/*@py:time*
 @py:urlparse	py.txt	/*@py:urlparse*
 @rsync	tools.txt	/*@rsync*
 @scheme	scheme.txt	/*@scheme*
